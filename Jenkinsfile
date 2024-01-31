@@ -9,7 +9,7 @@ pipeline {
                 credentialsId: '',
                 customFields: '',
                 excludeFolders: '',
-                exclusionsSetting: 'global',
+                exclusionsSetting: 'job',
                 failBuildOnNewResults: false,
                 failBuildOnNewSeverity: 'HIGH',
                 filterPattern: '''!**/_cvs/**/*, !**/.svn/**/*, !**/.hg/**/*, !**/.git/**/*, !**/.bzr/**/*,
