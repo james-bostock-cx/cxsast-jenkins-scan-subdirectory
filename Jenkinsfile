@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-      stage ('CxSCA') {
+      stage ('CxSAST') {
         steps {
           step([$class: 'CxScanBuilder',
                 comment: '',
@@ -25,7 +25,8 @@ pipeline {
                                   !**/*.htmls, !**/*.ihtml, !**/*.mht, !**/*.mhtm, !**/*.mhtml, !**/*.ssi, !**/*.stm,
                                   !**/*.bin,!**/*.lock,!**/*.svg,!**/*.obj,
                                   !**/*.stml, !**/*.ttml, !**/*.txn, !**/*.xhtm, !**/*.xhtml, !**/*.class, !**/*.iml, !Checkmarx/Reports/*.*,
-                                  !OSADependencies.json, !**/node_modules/**/*, !**/.cxsca-results.json, !**/.cxsca-sast-results.json, !.checkmarx/cx.config''',
+                                  !OSADependencies.json, !**/node_modules/**/*, !**/.cxsca-results.json, !**/.cxsca-sast-results.json, !.checkmarx/cx.config,
+                                  src/include/**/*''',
                 fullScanCycle: 10,
                 groupId: '1',
                 password: '{AQAAABAAAAAQgl2nMau2LxXkt8kNXRoO2BDggK0QxAPXQQa4i5o5sSM=}',
